@@ -1,0 +1,11 @@
+.flex {
+  display: flex;
+}
+
+.content-between {
+  justify-content: space-between;
+}
+
+.comm-pad-h {
+  padding: 0 15px;
+}
