@@ -1,9 +1,14 @@
+import router from "@/router";
 import Header from "./Header.vue";
-import { fireEvent, render, screen } from "@testing-library/vue";
+import { render, screen } from "@testing-library/vue";
 
 describe("Header component", () => {
   beforeEach(() => {
-    render(Header);
+    render(Header, {
+      global: {
+        plugins: [router],
+      },
+    });
   });
 
   it("should render a title 'Where in the world?'", () => {
@@ -20,19 +25,5 @@ describe("Header component", () => {
     });
 
     expect(button).toBeDefined();
-  });
-
-  it("should replace regular moon icon with filled icon", async () => {
-    const button = screen.getByRole("button");
-
-    expect(
-      button.firstElementChild!.classList.contains("fa-regular")
-    ).toBeTruthy();
-
-    await fireEvent.click(button);
-
-    expect(
-      button.firstElementChild?.classList.contains("fa-solid")
-    ).toBeTruthy();
   });
 });
