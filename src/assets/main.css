@@ -1,15 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;800&display=swap");
 
 :root {
   --text: hsl(200, 15%, 8%);
   --input: hsl(0, 0%, 52%);
   --back: hsl(0, 0%, 98%);
+  --back-option: #eee;
   --element: hsl(0, 0%, 100%);
 }
 
 .dark {
   --text: hsl(0, 0%, 100%);
+  --input: var(--text);
   --back: hsl(207, 26%, 17%);
+  --back-option: hsl(216, 65.9%, 48.2%, 0.1);
   --element: hsl(209, 23%, 22%);
 }
 
@@ -22,8 +25,8 @@
 }
 
 body {
-  font-family: "Nunito Sans", sans-serif;
   color: var(--text);
+  font-family: "Nunito Sans", sans-serif;
   background: var(--back);
   height: 100vh;
 }
@@ -34,4 +37,25 @@ button {
   font: inherit;
   font-weight: 600;
   color: inherit;
+}
+
+input {
+  background: transparent;
+  outline: none;
+  border: none;
+}
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
 }

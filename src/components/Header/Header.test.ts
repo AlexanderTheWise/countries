@@ -22,14 +22,14 @@ describe("Header component", () => {
     expect(button).toBeDefined();
   });
 
-  it("should replace regular moon icon with filled icon", () => {
+  it("should replace regular moon icon with filled icon", async () => {
     const button = screen.getByRole("button");
 
     expect(
       button.firstElementChild!.classList.contains("fa-regular")
     ).toBeTruthy();
 
-    fireEvent.click(button);
+    await fireEvent.click(button);
 
     expect(
       button.firstElementChild?.classList.contains("fa-solid")
