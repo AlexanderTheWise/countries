@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "vite",
-    "build": "run-p type-check build-only",
+    "build": "run-p build-only",
     "preview": "vite preview",
-    "test": "vitest"
+    "test": "vitest",
+    "build-only": "vite build"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
