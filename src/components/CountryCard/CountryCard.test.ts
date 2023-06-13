@@ -2,18 +2,10 @@ import type { SimpleCountry } from "@/types";
 import CountryCard from "./CountryCard.vue";
 import { render, screen } from "@testing-library/vue";
 import router from "@/router";
+import countries from "@/mocks/data";
 
 describe("CountryCard component", () => {
-  const country: SimpleCountry = {
-    name: { common: "Spain", nativeName: { spa: { common: "España" } } },
-    capital: ["Madrid"],
-    flags: {
-      alt: "The spain flag is called rojigualda",
-      png: "spain-flag.png",
-    },
-    region: "Europe",
-    population: 47e6,
-  };
+  const country: SimpleCountry = countries[0];
 
   beforeEach(() => {
     render(CountryCard, {
