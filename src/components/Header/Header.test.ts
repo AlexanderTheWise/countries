@@ -6,6 +6,7 @@ describe("Header component", () => {
   beforeEach(() => {
     render(Header, {
       global: {
+        stubs: ["font-awesome-icon"],
         plugins: [router],
       },
     });

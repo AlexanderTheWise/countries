@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { onBeforeMount, ref } from "vue";
-import type { SimpleCountries, SimpleCountry } from "@/types";
+import type { SimpleCountries } from "@/types";
 
 const countryNames = ref<string[]>();
 
